@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="第三章補充：雙框架指令對照卡與版本矩陣｜小抄">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <g font-family="Inter, Arial, Helvetica, sans-serif" fill="#e2e8f0">
+    <text x="60" y="90" font-size="36" font-weight="700">AI vibe coding - 手機 App</text>
+    <text x="60" y="130" font-size="22" opacity="0.9">第三章補充：雙框架指令對照卡與版本矩陣</text>
+  </g>
+
+  <!-- Left panel: Flutter cheatsheet -->
+  <g transform="translate(60, 160)" font-family="Inter, Arial, Helvetica, sans-serif" filter="url(#shadow)">
+    <rect x="0" y="0" width="460" height="260" rx="16" fill="#0b1220" stroke="#38bdf8" stroke-width="2"/>
+    <text x="20" y="36" fill="#e2e8f0" font-size="18" font-weight="700">Flutter 指令</text>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" fill="#cbd5e1" font-size="16">
+      <text x="20" y="76">flutter devices</text>
+      <text x="20" y="104">cd &lt;你的 Flutter 專案資料夾&gt;</text>
+      <text x="20" y="132">flutter run -t lib/main.dart -d &lt;deviceId&gt;</text>
+      <text x="20" y="160">flutter clean &amp;&amp; flutter pub get</text>
+      <text x="20" y="188">flutter build apk --release </text>
+      <text x="20" y="216">-t lib/&lt;your_entry&gt;.dart</text>
+    </g>
+  </g>
+
+  <!-- Right panel: React Native cheatsheet -->
+  <g transform="translate(680, 160)" font-family="Inter, Arial, Helvetica, sans-serif" filter="url(#shadow)">
+    <rect x="0" y="0" width="460" height="260" rx="16" fill="#0b1220" stroke="#a78bfa" stroke-width="2"/>
+    <text x="20" y="36" fill="#e2e8f0" font-size="18" font-weight="700">React Native 指令</text>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" fill="#cbd5e1" font-size="16">
+      <text x="20" y="76">adb devices</text>
+      <text x="20" y="104">cd &lt;你的 RN 專案資料夾&gt;</text>
+      <text x="20" y="132">npx react-native start</text>
+      <text x="20" y="160">npx react-native run</text>
+      <text x="20" y="188">--deviceId &lt;deviceId&gt; --no-packager</text>
+      <text x="20" y="216">cd android &amp;&amp; ./gradlew assembleRelease</text>
+    </g>
+  </g>
+
+  <!-- Bottom: Quick fixes and versions -->
+  <g transform="translate(60, 450)" font-family="Inter, Arial, Helvetica, sans-serif" filter="url(#shadow)">
+    <rect x="0" y="0" width="1080" height="140" rx="14" fill="#0b1220" stroke="#22d3ee" stroke-width="2"/>
+    <text x="20" y="32" fill="#e2e8f0" font-size="16" font-weight="700">快速處置與版本矩陣</text>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" fill="#cbd5e1" font-size="15">
+      <text x="20" y="68">1) 8081：kill -9 $(lsof -ti:8081)</text>
+      <text x="20" y="96">2) Flutter 授權：flutter doctor --android-licenses</text>
+      <text x="20" y="124">3) RN 診斷：npx react-native doctor</text>
+    </g>
+    <g font-family="Inter, Arial, Helvetica, sans-serif" fill="#cbd5e1" font-size="14">
+      <text x="600" y="68">RN：Node 18 LTS + JDK 17 + AGP 8.x + SDK 34</text>
+      <text x="600" y="96">Flutter：Stable + JDK 17 + SDK 34</text>
+      <text x="600" y="124">離線驗證：adb install -r &lt;你的 APK 路徑&gt;</text>
+    </g>
+  </g>
+
+</svg>
+
+

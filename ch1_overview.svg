@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="AI vibe coding 流程：點子 → Cursor → Flutter / React Native → 裝置">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#e2e8f0"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <g font-family="Inter, Arial, Helvetica, sans-serif" fill="#e2e8f0">
+    <text x="60" y="90" font-size="36" font-weight="700">AI vibe coding - 手機 App</text>
+    <text x="60" y="130" font-size="22" opacity="0.9">第一章：前言｜一眼懂流程</text>
+  </g>
+
+  <!-- Flow nodes -->
+  <g font-family="Inter, Arial, Helvetica, sans-serif" fill="#e2e8f0" stroke="#none" stroke-width="2">
+    <!-- Idea -->
+    <g transform="translate(120, 260)" filter="url(#shadow)">
+      <circle cx="60" cy="60" r="60" fill="#0b1220" stroke="#38bdf8"/>
+      <text x="60" y="60" text-anchor="middle" dominant-baseline="central" font-size="18" font-weight="600">點子 Idea</text>
+    </g>
+
+    <!-- Cursor -->
+    <g transform="translate(300, 230)" filter="url(#shadow)">
+      <rect x="0" y="0" width="260" height="120" rx="16" fill="#0b1220" stroke="#38bdf8"/>
+      <text x="130" y="50" text-anchor="middle" font-size="20" font-weight="700">Cursor</text>
+      <text x="130" y="78" text-anchor="middle" font-size="14" opacity="0.9">編輯器＋終端＋AI 協作</text>
+    </g>
+
+    <!-- Frameworks container -->
+    <g transform="translate(600, 210)" filter="url(#shadow)">
+      <rect x="0" y="0" width="280" height="160" rx="16" fill="#0b1220" stroke="#38bdf8"/>
+      <text x="140" y="32" text-anchor="middle" font-size="16" opacity="0.9">選擇適合你的跨平台框架</text>
+      <!-- Flutter box -->
+      <rect x="20" y="60" width="110" height="80" rx="12" fill="#0b1220" stroke="#22d3ee"/>
+      <text x="75" y="105" text-anchor="middle" font-size="18" font-weight="700">Flutter</text>
+      <!-- RN box -->
+      <rect x="150" y="60" width="110" height="80" rx="12" fill="#0b1220" stroke="#a78bfa"/>
+      <text x="205" y="105" text-anchor="middle" font-size="16" font-weight="700">React Native</text>
+    </g>
+
+    <!-- Device (phone) -->
+    <g transform="translate(930, 180)" filter="url(#shadow)">
+      <rect x="0" y="0" width="150" height="240" rx="26" fill="#0b1220" stroke="#38bdf8"/>
+      <rect x="18" y="28" width="114" height="180" rx="14" fill="#111827" stroke="#334155"/>
+      <circle cx="75" cy="222" r="6" fill="#334155"/>
+      <text x="75" y="120" text-anchor="middle" font-size="16" fill="#e5e7eb">裝置</text>
+      <text x="75" y="140" text-anchor="middle" font-size="16" fill="#e5e7eb">(Android)</text>
+    </g>
+  </g>
+
+  <!-- Arrows -->
+  <g stroke="#e2e8f0" stroke-width="3" fill="none" marker-end="url(#arrow)" opacity="0.95">
+    <line x1="240" y1="320" x2="300" y2="290"/>
+    <line x1="560" y1="290" x2="600" y2="290"/>
+    <line x1="880" y1="290" x2="930" y2="270"/>
+  </g>
+
+  <!-- Footer helper text -->
+  <g font-family="Inter, Arial, Helvetica, sans-serif" fill="#cbd5e1">
+    <text x="60" y="560" font-size="18" opacity="0.95">先能跑起來 → 再理解原因 → 持續優化</text>
+    <text x="60" y="590" font-size="14" opacity="0.8">地圖搜尋、可編輯清單、本地儲存、離線 Release：選擇最適合你的平台</text>
+  </g>
+</svg>
+

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="第四章：午餐 App 規劃與 UI 骨架｜流程與驗收">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#e2e8f0"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <g font-family="Inter, Arial, Helvetica, sans-serif" fill="#e2e8f0">
+    <text x="60" y="90" font-size="36" font-weight="700">AI vibe coding - 手機 App</text>
+    <text x="60" y="130" font-size="22" opacity="0.9">第四章：午餐 App 規劃與 UI 骨架</text>
+  </g>
+
+  <!-- Columns: Home skeleton, Result skeleton, State & Flow -->
+  <g font-family="Inter, Arial, Helvetica, sans-serif">
+    <!-- Left: Home skeleton -->
+    <g transform="translate(60, 170)" filter="url(#shadow)">
+      <rect x="0" y="0" width="320" height="280" rx="16" fill="#0b1220" stroke="#38bdf8" stroke-width="2"/>
+      <text x="20" y="36" fill="#e2e8f0" font-size="18" font-weight="700">主畫面骨架</text>
+      <g fill="#cbd5e1" font-size="16">
+        <text x="20" y="76">• 標題與副標題</text>
+        <text x="20" y="104">• 圓形主按鈕（抽籤）</text>
+        <text x="20" y="132">• 清單區（假資料）</text>
+      </g>
+    </g>
+
+    <!-- Middle: Result skeleton -->
+    <g transform="translate(440, 170)" filter="url(#shadow)">
+      <rect x="0" y="0" width="320" height="280" rx="16" fill="#0b1220" stroke="#22d3ee" stroke-width="2"/>
+      <text x="20" y="36" fill="#e2e8f0" font-size="18" font-weight="700">結果頁骨架</text>
+      <g fill="#cbd5e1" font-size="16">
+        <text x="20" y="76">• 顯示抽中的餐點</text>
+        <text x="20" y="104">• 返回／確認按鈕</text>
+        <text x="20" y="132">• 後續再加歷史紀錄</text>
+      </g>
+    </g>
+
+    <!-- Right: State & flow -->
+    <g transform="translate(820, 170)" filter="url(#shadow)">
+      <rect x="0" y="0" width="320" height="280" rx="16" fill="#0b1220" stroke="#a78bfa" stroke-width="2"/>
+      <text x="20" y="36" fill="#e2e8f0" font-size="18" font-weight="700">狀態與結果</text>
+      <g fill="#cbd5e1" font-size="16">
+        <text x="20" y="76">• 狀態：lunchList、selectedLunch</text>
+        <text x="20" y="104">• 點主按鈕 → 顯示結果頁</text>
+        <text x="20" y="132">• 返回 → 回主畫面</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Arrows between panels -->
+  <g stroke="#e2e8f0" stroke-width="3" fill="none" marker-end="url(#arrow)" opacity="0.95">
+    <line x1="380" y1="260" x2="440" y2="260"/>
+    <line x1="760" y1="260" x2="820" y2="260"/>
+  </g>
+
+  <!-- Bottom: Acceptance & screenshots plan -->
+  <g transform="translate(60, 480)" filter="url(#shadow)">
+    <rect x="0" y="0" width="1080" height="110" rx="14" fill="#0b1220" stroke="#22d3ee" stroke-width="2"/>
+    <text x="20" y="32" font-family="Inter, Arial, Helvetica, sans-serif" fill="#e2e8f0" font-size="16" font-weight="700">驗收結果</text>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" fill="#cbd5e1" font-size="15">
+      <text x="20" y="60">1) UI 對照：主畫面／結果頁</text>
+      <text x="20" y="86">2) 終端驗收：Flutter run、RN Metro、RN 安裝</text>
+      <text x="520" y="60">3) 裝置驗收：離線可開（Release APK）</text> 
+      <text x="520" y="86">4) 檢查有沒有語法錯誤</text>
+    </g>
+  </g>
+
+</svg>
+
+
