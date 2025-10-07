@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="第八章：可編輯清單與本地儲存（新增、刪除、排序、JSON 升級）">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <g font-family="Inter, Arial, Helvetica, sans-serif" fill="#e2e8f0">
+    <text x="60" y="60" font-size="36" font-weight="700">AI vibe coding - 手機 App</text>
+    <text x="60" y="100" font-size="22" opacity="0.9">第八章：可編輯清單與本地儲存</text>
+  </g>
+
+  <!-- AI Instructions -->
+  <g transform="translate(60, 130)" filter="url(#shadow)">
+    <rect x="0" y="0" width="1080" height="150" rx="14" fill="#0b1220" stroke="#f59e0b" stroke-width="2"/>
+    <text x="20" y="32" font-family="Inter, Arial, Helvetica, sans-serif" fill="#e2e8f0" font-size="18" font-weight="700">Cursor 提示指令</text>
+    <g font-family="Inter, Arial, Helvetica, sans-serif" fill="#cbd5e1" font-size="16">
+      <text x="20" y="60">請幫我加個可編輯的午餐清單功能到 App</text>
+      <text x="20" y="84">• 能新增、能刪除午餐選項</text>
+      <text x="20" y="108">• 重啟 App 後資料還在</text>
+    </g>
+    <g font-family="Inter, Arial, Helvetica, sans-serif" fill="#94a3b8" font-size="14">
+      <text x="20" y="135">遇到問題時：「重啟後資料不見了」「重複項目一直加」「排序後又變回原樣」</text>
+    </g>
+  </g>
+
+  <!-- Left: Flutter shared_preferences -->
+  <g transform="translate(60, 295)" font-family="Inter, Arial, Helvetica, sans-serif" filter="url(#shadow)">
+    <rect x="0" y="0" width="500" height="230" rx="16" fill="#0b1220" stroke="#38bdf8" stroke-width="2"/>
+    <text x="20" y="36" fill="#e2e8f0" font-size="18" font-weight="700">Flutter（shared_preferences）</text>
+    <g fill="#cbd5e1" font-size="16">
+      <text x="20" y="76">• Key：lunch_list；JSON 字串</text>
+      <text x="20" y="104">• 新增/刪除：立刻 _saveLunchList()</text>
+      <text x="20" y="132">• 對話框輸入：trim，避免重複與空白</text>
+      <text x="20" y="160">• 排序（可選）：A→Z 後儲存</text>
+      <text x="20" y="188">• 升級：v1=[...]；v2={version, items}</text>
+    </g>
+    <g fill="#94a3b8" font-size="14">
+      <text x="20" y="215">提示：讀寫皆用 async/await，避免阻塞 UI。</text>
+    </g>
+  </g>
+
+  <!-- Right: React Native AsyncStorage -->
+  <g transform="translate(640, 295)" font-family="Inter, Arial, Helvetica, sans-serif" filter="url(#shadow)">
+    <rect x="0" y="0" width="500" height="230" rx="16" fill="#0b1220" stroke="#a78bfa" stroke-width="2"/>
+    <text x="20" y="36" fill="#e2e8f0" font-size="18" font-weight="700">React Native（AsyncStorage）</text>
+    <g fill="#cbd5e1" font-size="16">
+      <text x="20" y="76">• Key：lunch_list；JSON 字串</text>
+      <text x="20" y="104">• 新增/刪除：saveLunchList(newList)</text>
+      <text x="20" y="132">• 對話框輸入：trim 與重複檢查</text>
+      <text x="20" y="160">• 排序（可選）：A→Z 後儲存</text>
+      <text x="20" y="188">• 升級 loader：陣列或 {items} 皆解析</text>
+    </g>
+    <g fill="#94a3b8" font-size="14">
+      <text x="20" y="215">提示：try/catch 包起來，console 保留錯誤。</text>
+    </g>
+  </g>
+
+  <!-- Bottom: Acceptance -->
+  <g transform="translate(60, 540)" filter="url(#shadow)">
+    <rect x="0" y="0" width="1080" height="80" rx="14" fill="#0b1220" stroke="#22d3ee" stroke-width="2"/>
+    <text x="20" y="32" font-family="Inter, Arial, Helvetica, sans-serif" fill="#e2e8f0" font-size="16" font-weight="700">驗收</text>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" fill="#cbd5e1" font-size="15">
+      <text x="20" y="60">1) 重啟 App 後資料仍在；排序後仍維持；升級向下相容</text>
+      <text x="500" y="60">2) 內容重複或空白時發出警示</text>  
+    </g>
+  </g>
+
+</svg>
+
+

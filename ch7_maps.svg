@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="第七章：一鍵開地圖搜尋（URL、編碼、模擬器差異、try-catch）">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <g font-family="Inter, Arial, Helvetica, sans-serif" fill="#e2e8f0">
+    <text x="60" y="60" font-size="36" font-weight="700">AI vibe coding - 手機 App</text>
+    <text x="60" y="100" font-size="22" opacity="0.9">第七章：一鍵開地圖搜尋</text>
+  </g>
+  <!-- AI Instructions -->
+  <g transform="translate(60, 170)" filter="url(#shadow)">
+    <rect x="0" y="0" width="1080" height="180" rx="14" fill="#0b1220" stroke="#f59e0b" stroke-width="2"/>
+    <text x="20" y="32" font-family="Inter, Arial, Helvetica, sans-serif" fill="#e2e8f0" font-size="18" font-weight="700">Cursor 提示指令</text>
+    <g font-family="Inter, Arial, Helvetica, sans-serif" fill="#cbd5e1" font-size="16">
+      <text x="20" y="60">請幫我加個 Google Maps 搜尋功能到午餐 App</text>
+      <text x="20" y="84">• 結果頁加個「開啟 Google Maps」按鈕</text>
+      <text x="20" y="108">• 中文搜尋不要亂碼</text>
+      <text x="20" y="132">• 按了沒反應就顯示錯誤訊息</text>
+    </g>
+    <g font-family="Inter, Arial, Helvetica, sans-serif" fill="#94a3b8" font-size="14">
+      <text x="20" y="160">遇到問題時：「中文變亂碼了」「按了沒反應」「按鈕沒感覺」</text>
+    </g>
+  </g>
+
+
+  <!-- Left: Flutter URL & Handling -->
+  <g transform="translate(60, 400)" font-family="Inter, Arial, Helvetica, sans-serif" filter="url(#shadow)">
+    <rect x="0" y="0" width="500" height="210" rx="16" fill="#0b1220" stroke="#38bdf8" stroke-width="2"/>
+    <text x="20" y="36" fill="#e2e8f0" font-size="18" font-weight="700">Flutter 地圖開啟</text>
+    <g fill="#cbd5e1" font-size="16">
+      <text x="20" y="76">• 正確 URL：https://www.google.com/maps/search/&lt;string&gt;</text>
+      <text x="20" y="104">• 中文編碼：Uri.encodeComponent(query)</text>
+      <text x="20" y="132">• 啟動模式：LaunchMode.platformDefault</text>
+      <text x="20" y="160">• 不使用 canLaunchUrl；try-catch 顯示 SnackBar</text>
+    </g>
+    <g fill="#94a3b8" font-size="14">
+      <text x="20" y="192">模擬器可能誤判可用性，直接開啟再捕捉錯誤較穩。</text>
+    </g>
+  </g>
+
+  <!-- Right: React Native URL & Handling -->
+  <g transform="translate(640, 400)" font-family="Inter, Arial, Helvetica, sans-serif" filter="url(#shadow)">
+    <rect x="0" y="0" width="500" height="210" rx="16" fill="#0b1220" stroke="#a78bfa" stroke-width="2"/>
+    <text x="20" y="36" fill="#e2e8f0" font-size="18" font-weight="700">React Native 地圖開啟</text>
+    <g fill="#cbd5e1" font-size="16">
+      <text x="20" y="76">• 正確 URL：https://www.google.com/maps/search/&lt;string&gt;</text>
+      <text x="20" y="104">• 中文編碼：encodeURIComponent(query)</text>
+      <text x="20" y="132">• 不使用 Linking.canOpenURL；openURL + catch</text>
+      <text x="20" y="160">• 失敗提示：Alert.alert</text>
+    </g>
+    <g fill="#94a3b8" font-size="14">
+      <text x="20" y="192">實機行為更貼近使用者；建議以實機驗收。</text>
+    </g>
+  </g>
+
+
+
+  <!-- Bottom: Acceptance -->
+  <g transform="translate(800, 210)" filter="url(#shadow)">
+    <rect x="0" y="0" width="280" height="110" rx="14" fill="#0b1220" stroke="#22d3ee" stroke-width="2"/>
+    <text x="20" y="32" font-family="Inter, Arial, Helvetica, sans-serif" fill="#e2e8f0" font-size="16" font-weight="700">驗收</text>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" fill="#cbd5e1" font-size="15">
+      <text x="20" y="60">1) 點按可開啟地圖（瀏覽器或 App）</text>
+      <text x="20" y="84">2) 中文關鍵字顯示正常</text>
+    </g>
+  </g>
+
+</svg>
+
+

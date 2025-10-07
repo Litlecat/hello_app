@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="第五章：抽籤邏輯與結果頁互動（Flutter／RN 對照）">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-label="第五章：抽籤邏輯與結果頁互動（Flutter／RN 對照）">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0f172a"/>
@@ -12,57 +12,76 @@
     </marker>
   </defs>
 
-  <rect x="0" y="0" width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="750" fill="url(#bg)"/>
 
   <!-- Header -->
   <g font-family="Inter, Arial, Helvetica, sans-serif" fill="#e2e8f0">
-    <text x="60" y="90" font-size="36" font-weight="700">AI vibe coding - 手機 App</text>
-    <text x="60" y="130" font-size="22" opacity="0.9">第五章：抽籤邏輯與結果頁互動（Flutter／RN 對照）</text>
+    <text x="60" y="50" font-size="36" font-weight="700">AI vibe coding - 手機 App</text>
+    <text x="60" y="90" font-size="22" opacity="0.9">第五章：抽籤邏輯與結果頁互動（Flutter／RN 對照）</text>
+  </g>
+
+  <!-- AI Instructions Section -->
+  <g transform="translate(60, 110)" font-family="Inter, Arial, Helvetica, sans-serif" filter="url(#shadow)">
+    <rect x="0" y="0" width="1080" height="85" rx="16" fill="#600030" stroke="#ef4444" stroke-width="2"/>
+    <text x="20" y="30" fill="#ffffff" font-size="18" font-weight="700">Cursor 提示指令</text>
+    <g fill="#ffffff" font-size="14">
+      <text x="10" y="52">「請幫我設計主要按鈕功能，按下去隨機抽取選項」</text>
+      <text x="10" y="72">「製作返回鍵，完成抽選後回到主畫面，並顯示上一次抽選的結果」</text>
+    </g>
+    <text x="850" y="30" fill="#fbbf24" font-size="14" font-weight="600">直覺對話，讓 AI 成為你的得力助手</text>
   </g>
 
   <!-- Left: Flutter flow -->
-  <g transform="translate(60, 170)" font-family="Inter, Arial, Helvetica, sans-serif" filter="url(#shadow)">
-    <rect x="0" y="0" width="500" height="280" rx="16" fill="#0b1220" stroke="#38bdf8" stroke-width="2"/>
-    <text x="20" y="36" fill="#e2e8f0" font-size="18" font-weight="700">Flutter 流程</text>
-    <g fill="#cbd5e1" font-size="16">
-      <text x="20" y="76">1) 主按鈕 onPressed → 隨機抽籤</text>
-      <text x="20" y="104">2) Navigator.push(ResultPage)</text>
-      <text x="20" y="132">3) ResultPage：顯示 selectedLunch</text>
-      <text x="20" y="160">4) 返回：Navigator.pop()</text>
-      <text x="20" y="188">5) 確認：onConfirm(lunch) → setState()</text>
+  <g transform="translate(60, 210)" font-family="Inter, Arial, Helvetica, sans-serif" filter="url(#shadow)">
+    <rect x="0" y="0" width="500" height="220" rx="16" fill="#0b1220" stroke="#38bdf8" stroke-width="2"/>
+    <text x="20" y="26" fill="#e2e8f0" font-size="16" font-weight="700">Flutter 流程</text>
+    <g fill="#cbd5e1" font-size="14">
+      <text x="20" y="50">1) 主按鈕 → 隨機抽籤 → Navigator.push</text>
+      <text x="20" y="72">2) ResultPage 顯示 selectedLunch</text>
+      <text x="20" y="94">3) 返回/確認 → Navigator.pop</text>
+      <text x="20" y="116">4) 空清單 SnackBar 提示</text>
     </g>
-    <g fill="#94a3b8" font-size="14">
-      <text x="20" y="220">空清單：ScaffoldMessenger.showSnackBar('請先新增午餐選項')</text>
-      <text x="20" y="244">狀態：_lunchList、_confirmedLunch</text>
+    <g fill="#94a3b8" font-size="12">
+      <text x="20" y="140">狀態：_lunchList、_confirmedLunch</text>
+      <text x="20" y="160">flutter run -t lib/main.dart -d &lt;deviceId&gt;</text>
     </g>
   </g>
 
   <!-- Right: RN flow -->
-  <g transform="translate(640, 170)" font-family="Inter, Arial, Helvetica, sans-serif" filter="url(#shadow)">
-    <rect x="0" y="0" width="500" height="280" rx="16" fill="#0b1220" stroke="#a78bfa" stroke-width="2"/>
-    <text x="20" y="36" fill="#e2e8f0" font-size="18" font-weight="700">React Native 流程</text>
-    <g fill="#cbd5e1" font-size="16">
-      <text x="20" y="76">1) 主按鈕 onPress → 隨機抽籤</text>
-      <text x="20" y="104">2) setSelectedLunch(lunch)；setShowResultPage(true)</text>
-      <text x="20" y="132">3) ResultPage：顯示 selectedLunch</text>
-      <text x="20" y="160">4) 返回：onBack() → setShowResultPage(false)</text>
-      <text x="20" y="188">5) 確認：onConfirm(lunch) → 回主頁處理</text>
+  <g transform="translate(640, 210)" font-family="Inter, Arial, Helvetica, sans-serif" filter="url(#shadow)">
+    <rect x="0" y="0" width="500" height="220" rx="16" fill="#0b1220" stroke="#a78bfa" stroke-width="2"/>
+    <text x="20" y="26" fill="#e2e8f0" font-size="16" font-weight="700">React Native 流程</text>
+    <g fill="#cbd5e1" font-size="14">
+      <text x="20" y="50">1) 主按鈕 → 隨機抽籤 → setShowResultPage</text>
+      <text x="20" y="72">2) ResultPage 顯示 selectedLunch</text>
+      <text x="20" y="94">3) 返回/確認 → setShowResultPage(false)</text>
+      <text x="20" y="116">4) 空清單 Alert 提示</text>
     </g>
-    <g fill="#94a3b8" font-size="14">
-      <text x="20" y="220">空清單：Alert.alert('請先新增午餐選項')</text>
-      <text x="20" y="244">狀態：lunchList、selectedLunch、showResultPage</text>
+    <g fill="#94a3b8" font-size="12">
+      <text x="20" y="140">狀態：lunchList、selectedLunch、showResultPage</text>
+      <text x="20" y="160">npx react-native start + run-android</text>
     </g>
   </g>
 
   <!-- Bottom: Acceptance -->
-  <g transform="translate(60, 480)" filter="url(#shadow)">
-    <rect x="0" y="0" width="1080" height="110" rx="14" fill="#0b1220" stroke="#22d3ee" stroke-width="2"/>
-    <text x="20" y="32" font-family="Inter, Arial, Helvetica, sans-serif" fill="#e2e8f0" font-size="16" font-weight="700">驗收</text>
-    <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" fill="#cbd5e1" font-size="15">
-      <text x="20" y="60">1) 兩框架都能抽籤且顯示結果頁</text>
-      <text x="20" y="86">2) 返回/確認正常；空清單有提示</text>
-      <text x="520" y="86">3) Cursor 兩分頁同時運作（Flutter／RN）</text>
+  <g transform="translate(60, 450)" filter="url(#shadow)">
+    <rect x="0" y="0" width="1080" height="120" rx="14" fill="#0b1220" stroke="#22d3ee" stroke-width="2"/>
+    <text x="20" y="30" font-family="Inter, Arial, Helvetica, sans-serif" fill="#e2e8f0" font-size="16" font-weight="700">驗收清單</text>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" fill="#cbd5e1" font-size="14">
+      <text x="20" y="55">✓ 兩框架都能抽籤且顯示結果頁</text>
+      <text x="20" y="78">✓ 返回/確認正常；空清單有提示</text>
+      <text x="20" y="101">✓ 在 Cursor 兩分頁同時跑得動</text>
     </g>
+  </g>
+
+  <!-- AI Summary -->
+  <g transform="translate(60, 590)" font-family="Inter, Arial, Helvetica, sans-serif" filter="url(#shadow)">
+    <rect x="0" y="0" width="1080" height="80" rx="14" fill="#003E3E" stroke="#10b981" stroke-width="2"/>
+    <text x="20" y="25" fill="#ffffff" font-size="16" font-weight="700">AI 協作重點</text>
+    <g fill="#ffffff" font-size="14">
+      <text x="20" y="50">直覺對話 → 生成程式碼 → 測試回報 → 完整 APP</text>
+    </g>
+    <text x="20" y="70" fill="#a7f3d0" font-size="12">下一章：UI 美化 + 動畫 + 互動體驗（一樣用 AI 協助製作）</text>
   </g>
 
 </svg>

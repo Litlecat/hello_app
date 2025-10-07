@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-label="第六章：UI 美化與互動體驗（Flutter／RN 對照，主題與按鈕卡片）">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="750" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <g font-family="Inter, Arial, Helvetica, sans-serif" fill="#e2e8f0">
+    <text x="60" y="50" font-size="36" font-weight="700">AI vibe coding - 手機 App</text>
+    <text x="60" y="90" font-size="22" opacity="0.9">第六章：UI 美化與互動體驗</text>
+  </g>
+
+  <!-- AI Instructions Section -->
+  <g transform="translate(60, 130)" font-family="Inter, Arial, Helvetica, sans-serif" filter="url(#shadow)">
+    <rect x="0" y="0" width="1080" height="85" rx="16" fill="#600030" stroke="#ef4444" stroke-width="2"/>
+    <text x="20" y="30" fill="#ffffff" font-size="18" font-weight="700">Cursor 提示指令</text>
+    <g fill="#ffffff" font-size="14">
+      <text x="10" y="52">「請幫我美化午餐 App 的介面，讓首頁和結果頁看起來統一又好看」</text>
+      <text x="10" y="72">「幫我設計一套按鈕和卡片的樣式，按下去要有回饋感，顏色要協調」</text>
+    </g>
+    <text x="800" y="30" fill="#fbbf24" font-size="14" font-weight="600">讓 AI 自己判斷什麼是「好看」和「好用」</text>
+  </g>
+
+  <!-- Left: Flutter Theme & Components -->
+  <g transform="translate(60, 250)" font-family="Inter, Arial, Helvetica, sans-serif" filter="url(#shadow)">
+    <rect x="0" y="0" width="500" height="300" rx="16" fill="#0b1220" stroke="#38bdf8" stroke-width="2"/>
+    <text x="20" y="36" fill="#e2e8f0" font-size="18" font-weight="700">Flutter 樣式系統</text>
+    <g fill="#cbd5e1" font-size="16">
+      <text x="20" y="76">• ThemeData：ColorScheme.fromSeed(#5B8DEF)</text>
+      <text x="20" y="104">• ElevatedButton：radius 12；elevation 6；padding 20×14</text>
+      <text x="20" y="132">• Card：radius 12；elevation 3；margin 12</text>
+      <text x="20" y="160">• 背景：上到下的橘色系漸層</text>
+      <text x="20" y="188">• 主按鈕（首頁）：圓形 200；InkWell 水波紋</text>
+      <text x="20" y="216">• 結果卡片：圓角 24；陰影 20；主色點綴</text>
+    </g>
+    <g fill="#94a3b8" font-size="14">
+      <text x="20" y="248">小提醒：InkWell 需包在 Material 才有水波紋。</text>
+    </g>
+  </g>
+
+  <!-- Right: React Native Theme & Components -->
+  <g transform="translate(640, 250)" font-family="Inter, Arial, Helvetica, sans-serif" filter="url(#shadow)">
+    <rect x="0" y="0" width="500" height="300" rx="16" fill="#0b1220" stroke="#a78bfa" stroke-width="2"/>
+    <text x="20" y="36" fill="#e2e8f0" font-size="18" font-weight="700">React Native 樣式系統</text>
+    <g fill="#cbd5e1" font-size="16">
+      <text x="20" y="76">• theme.colors：primary #5B8DEF、background #0F172A</text>
+      <text x="20" y="104">• surface #111827、text #E5E7EB、spacing 12、radius 12</text>
+      <text x="20" y="132">• 陰影：Android elevation</text>
+      <text x="20" y="160">• 主按鈕：圓形 200；按壓 0.98 與 0.9 透明度</text>
+      <text x="20" y="188">• 卡片：radius 12；padding 15；margin 12</text>
+      <text x="20" y="216">• 統一 PrimaryButton / Card 重用於兩頁</text>
+    </g>
+    <g fill="#94a3b8" font-size="14">
+      <text x="20" y="248">小提醒：Android 無 shadow*；需設定 elevation。</text>
+    </g>
+  </g>
+
+  <!-- Bottom: Acceptance -->
+  <g transform="translate(60, 600)" filter="url(#shadow)">
+    <rect x="0" y="0" width="1080" height="110" rx="14" fill="#0b1220" stroke="#22d3ee" stroke-width="2"/>
+    <text x="20" y="32" font-family="Inter, Arial, Helvetica, sans-serif" fill="#e2e8f0" font-size="16" font-weight="700">驗收</text>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" fill="#cbd5e1" font-size="15">
+      <text x="20" y="60">1) 首頁與結果頁使用一致的按鈕/卡片樣式</text>
+      <text x="20" y="84">2) 按鈕有明顯按壓回饋；兩框架外觀一致</text>
+    </g>
+  </g>
+
+</svg>
+
+
