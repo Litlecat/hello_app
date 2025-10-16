@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="iOS 短篇 1：極速通關流程圖">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#e2e8f0"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="750" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <g font-family="Inter, Arial, Helvetica, sans-serif" fill="#e2e8f0">
+    <text x="60" y="60" font-size="36" font-weight="700">iOS 短篇 1</text>
+    <text x="60" y="90" font-size="22" opacity="0.9">極速通關：先跑起來</text>
+  </g>
+
+  <!-- Main flow -->
+  <g font-family="Inter, Arial, Helvetica, sans-serif" fill="#e2e8f0" stroke="#none" stroke-width="2">
+    
+    <!-- Step 1: Environment Check -->
+    <g transform="translate(60, 130)" filter="url(#shadow)">
+      <rect x="0" y="0" width="280" height="80" rx="16" fill="#0b1220" stroke="#38bdf8"/>
+      <text x="140" y="25" text-anchor="middle" font-size="16" font-weight="700">步驟 1：前置需求檢查</text>
+      <text x="140" y="45" text-anchor="middle" font-size="12" opacity="0.9">macOS + Xcode + CocoaPods</text>
+    </g>
+
+    <!-- Step 2: Installation -->
+    <g transform="translate(400, 130)" filter="url(#shadow)">
+      <rect x="0" y="0" width="280" height="80" rx="16" fill="#0b1220" stroke="#22d3ee"/>
+      <text x="140" y="25" text-anchor="middle" font-size="16" font-weight="700">步驟 2：安裝與設定</text>
+      <text x="140" y="45" text-anchor="middle" font-size="12" opacity="0.9">Command Line Tools + CocoaPods</text>
+      <text x="140" y="62" text-anchor="middle" font-size="10" opacity="0.7">sudo xcode-select --install</text>
+    </g>
+
+    <!-- Step 3: Flutter iOS -->
+    <g transform="translate(740, 130)" filter="url(#shadow)">
+      <rect x="0" y="0" width="280" height="80" rx="16" fill="#0b1220" stroke="#4ade80"/>
+      <text x="140" y="25" text-anchor="middle" font-size="16" font-weight="700">步驟 3：Flutter iOS</text>
+      <text x="140" y="45" text-anchor="middle" font-size="12" opacity="0.9">flutter run -d ios</text>
+    
+    </g>
+
+    <!-- Step 4: React Native iOS -->
+    <g transform="translate(60, 260)" filter="url(#shadow)">
+      <rect x="0" y="0" width="280" height="80" rx="16" fill="#0b1220" stroke="#f59e0b"/>
+      <text x="140" y="25" text-anchor="middle" font-size="16" font-weight="700">步驟 4：React Native iOS</text>
+      <text x="140" y="45" text-anchor="middle" font-size="12" opacity="0.9">cd ios &amp;&amp; pod install</text>
+    </g>
+
+    <!-- Step 5: Validation -->
+    <g transform="translate(400, 260)" filter="url(#shadow)">
+      <rect x="0" y="0" width="280" height="80" rx="16" fill="#0b1220" stroke="#a78bfa"/>
+      <text x="140" y="25" text-anchor="middle" font-size="16" font-weight="700">步驟 6：驗收清單</text>
+      <text x="140" y="45" text-anchor="middle" font-size="12" opacity="0.9">模擬器啟動 + 功能測試</text>
+    </g>
+
+    <!-- Step 6: Error Handling -->
+    <g transform="translate(740, 260)" filter="url(#shadow)">
+      <rect x="0" y="0" width="280" height="80" rx="16" fill="#0b1220" stroke="#ef4444"/>
+      <text x="140" y="25" text-anchor="middle" font-size="16" font-weight="700">步驟 7：錯誤處理</text>
+      <text x="140" y="45" text-anchor="middle" font-size="12" opacity="0.9">CocoaPods + Metro + 簽章</text>
+    </g>
+
+    <!-- Success -->
+    <g transform="translate(400, 410)" filter="url(#shadow)">
+      <rect x="0" y="0" width="280" height="90" rx="16" fill="#0b1220" stroke="#10b981"/>
+      <text x="140" y="25" text-anchor="middle" font-size="18" font-weight="700">🎉 iOS 開發環境就緒</text>
+      <text x="140" y="45" text-anchor="middle" font-size="14" opacity="0.9">Flutter + React Native 雙軌</text>
+      <text x="140" y="62" text-anchor="middle" font-size="12" opacity="0.7">模擬器開發，專注功能實現</text>
+    </g>
+  </g>
+
+  <!-- Arrows -->
+  <g stroke="#e2e8f0" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <line x1="350" y1="170" x2="390" y2="170"/>
+    <line x1="690" y1="170" x2="730" y2="170"/>
+    <line x1="350" y1="300" x2="390" y2="300"/>
+    <line x1="690" y1="300" x2="730" y2="300"/>
+    <line x1="540" y1="340" x2="540" y2="400"/>
+  </g>
+
+  <!-- AI Collaboration Box -->
+  <g transform="translate(60, 410)" filter="url(#shadow)" font-family="Inter, Arial, Helvetica, sans-serif" fill="#e2e8f0">
+    <rect x="0" y="0" width="280" height="90" rx="16" fill="#0b1220" stroke="#8b5cf6"/>
+    <text x="140" y="25" text-anchor="middle" font-size="16" font-weight="700">🤖 AI 協作提示</text>
+    <text x="70" y="45" font-size="11" opacity="0.9">遇到錯誤時，提供完整錯誤訊息</text>
+    <text x="70" y="60" font-size="11" opacity="0.9">讓 AI 生成診斷步驟與修復指令</text>
+    <text x="70" y="75" font-size="11" opacity="0.9">快速解決工具鏈問題，專注開發</text>
+  </g>
+
+  <!-- iOS Features Box -->
+  <g transform="translate(740, 410)" filter="url(#shadow)" font-family="Inter, Arial, Helvetica, sans-serif" fill="#e2e8f0">
+    <rect x="0" y="0" width="280" height="90" rx="16" fill="#0b1220" stroke="#06b6d4"/>
+    <text x="140" y="25" text-anchor="middle" font-size="16" font-weight="700">🍎 iOS 特色</text>
+    <text x="90" y="45" font-size="11" opacity="0.9">Apple Maps 原生整合</text>
+    <text x="90" y="60" font-size="11" opacity="0.9">模擬器開發體驗優異</text>
+    <text x="90" y="75" font-size="11" opacity="0.9">一次設定，持續開發</text>
+  </g>
+
+
+
+  <!-- Key Points -->
+  <g transform="translate(460, 520)" font-family="Inter, Arial, Helvetica, sans-serif" fill="#e2e8f0">
+    <text x="0" y="0" font-size="14" font-weight="700">🎯 關鍵要點：</text>
+    <text x="0" y="18" font-size="10" opacity="0.9">• 一次設定好工具鏈，模擬器開發已足夠</text>
+    <text x="0" y="36" font-size="10" opacity="0.9">• 遇到錯誤別慌，大部分是工具鏈問題</text>
+    <text x="0" y="54" font-size="10" opacity="0.9">• Flutter 與 React Native 核心邏輯相同</text>
+    <text x="0" y="72" font-size="10" opacity="0.9">• AI 協助快速診斷與修復</text>
+  </g>
+</svg>
