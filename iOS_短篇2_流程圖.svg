@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-label="iOS 短篇 2：地圖、驗收及除錯流程圖">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#e2e8f0"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="750" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <g font-family="Inter, Arial, Helvetica, sans-serif" fill="#e2e8f0">
+    <text x="60" y="50" font-size="36" font-weight="700">AI vibe coding - 手機 App iOS最速入門傳說(下)：地圖、驗收及除錯</text>
+  </g>
+
+  <!-- AI Instructions Section -->
+  <g transform="translate(60, 110)" font-family="Inter, Arial, Helvetica, sans-serif" filter="url(#shadow)">
+    <rect x="0" y="0" width="1080" height="85" rx="16" fill="#600030" stroke="#ef4444" stroke-width="2"/>
+    <text x="20" y="30" fill="#ffffff" font-size="18" font-weight="700">Cursor 提示指令</text>
+    <g fill="#ffffff" font-size="14">
+      <text x="10" y="52">「請幫我修正 iOS 地圖功能，使用 Apple Maps 作為備援，並加入常見錯誤的修復方法」</text>
+      <text x="10" y="72">「測試中文編碼是否正確，確保『牛肉麵』等關鍵字能正常顯示」</text>
+    </g>
+    <text x="850" y="30" fill="#fbbf24" font-size="14" font-weight="600">讓 AI 處理平台差異和錯誤修復</text>
+  </g>
+
+  <!-- Left: Maps Compatibility -->
+  <g transform="translate(60, 210)" font-family="Inter, Arial, Helvetica, sans-serif" filter="url(#shadow)">
+    <rect x="0" y="0" width="350" height="220" rx="16" fill="#0b1220" stroke="#38bdf8" stroke-width="2"/>
+    <text x="20" y="26" fill="#e2e8f0" font-size="16" font-weight="700">地圖/URL 相容性</text>
+    <g fill="#cbd5e1" font-size="14">
+      <text x="20" y="50">• Apple Maps 備援：iOS 自動切換</text>
+      <text x="20" y="72">• Flutter：Uri.parse('https://maps.apple.com/')</text>
+      <text x="20" y="94">• React Native：encodeURIComponent()</text>
+      <text x="20" y="116">• 中文編碼測試：「牛肉麵」正確顯示</text>
+    </g>
+    <g fill="#94a3b8" font-size="12">
+      <text x="20" y="140">平台差異：iOS 用 Apple Maps</text>
+      <text x="20" y="160">錯誤處理：Linking.openURL() catch</text>
+      <text x="20" y="180">驗證方法：模擬器實際測試</text>
+    </g>
+  </g>
+
+  <!-- Right: Verification Checklist -->
+  <g transform="translate(455, 210)" font-family="Inter, Arial, Helvetica, sans-serif" filter="url(#shadow)">
+    <rect x="0" y="0" width="250" height="220" rx="16" fill="#0b1220" stroke="#4ade80" stroke-width="2"/>
+    <text x="20" y="26" fill="#e2e8f0" font-size="16" font-weight="700">驗收清單</text>
+    <g fill="#cbd5e1" font-size="14">
+      <text x="20" y="50">基本功能：</text>
+      <text x="30" y="72">✓ iOS 模擬器正常啟動</text>
+      <text x="30" y="94">✓ 主按鈕可點擊</text>
+      <text x="30" y="116">✓ 抽籤功能正常</text>
+      <text x="30" y="138">✓ 結果頁返回/確認</text>
+    </g>
+    <g fill="#94a3b8" font-size="12">
+      <text x="20" y="160">進階功能：新增/刪除、資料持久化</text>
+      <text x="20" y="180">地圖搜尋：Apple Maps 或 Google Maps</text>
+    </g>
+  </g>
+
+  <!-- Left: Error Handling -->
+  <g transform="translate(60, 470)" font-family="Inter, Arial, Helvetica, sans-serif" filter="url(#shadow)">
+    <rect x="0" y="0" width="350" height="220" rx="16" fill="#0b1220" stroke="#f59e0b" stroke-width="2"/>
+    <text x="20" y="26" fill="#e2e8f0" font-size="16" font-weight="700">常見錯誤與修復</text>
+    <g fill="#cbd5e1" font-size="14">
+      <text x="20" y="50">錯誤 1：CocoaPods 版本衝突</text>
+      <text x="30" y="72">修復：rm -rf Pods Podfile.lock</text>
+      <text x="20" y="94">錯誤 2：證書簽署問題</text>
+      <text x="30" y="116">修復：Xcode 重新選擇 Team</text>
+      <text x="20" y="140">錯誤 3：Metro 連線問題</text>
+      <text x="30" y="160">修復：npx react-native start --reset-cache</text>
+      <text x="20" y="180">錯誤 4：Xcode 版本不相容</text>
+      <text x="30" y="200">修復：更新 Xcode 到最新版本</text>
+    </g>
+  </g>
+
+  <!-- Right: Success Summary -->
+  <g transform="translate(455, 470)" font-family="Inter, Arial, Helvetica, sans-serif" filter="url(#shadow)">
+    <rect x="0" y="0" width="250" height="220" rx="16" fill="#0b1220" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="20" y="26" fill="#e2e8f0" font-size="16" font-weight="700">完成成果</text>
+    <g fill="#cbd5e1" font-size="14">
+      <text x="20" y="50">✓ iOS 雙框架開發流程</text>
+      <text x="20" y="72">✓ 工具鏈設定完成</text>
+      <text x="20" y="94">✓ 地圖功能平台差異處理</text>
+      <text x="20" y="116">✓ 完整驗收清單</text>
+      <text x="20" y="140">✓ 跨平台開發基礎能力</text>
+      <text x="20" y="160">✓ 從 Android 到 iOS 無縫切換</text>
+      <text x="20" y="180">✓ 一次設定，專注開發</text>
+    </g>
+  </g>
+
+  <!-- Connection Arrows -->
+  <line x1="410" y1="320" x2="450" y2="320" stroke="#e2e8f0" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="340" y1="433" x2="340" y2="465" stroke="#e2e8f0" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="410" y1="590" x2="450" y2="590" stroke="#e2e8f0" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Footer -->
+  <text x="600" y="720" text-anchor="middle" fill="#9ca3af" font-family="Inter, Arial, Helvetica, sans-serif" font-size="14">
+    iOS 開發：一次設定好工具鏈，專注於功能開發
+  </text>
+</svg>

@@ -504,9 +504,21 @@ class _ResultPageState extends State<ResultPage> {
 
   // 處理「搜尋」按鈕的點擊事件
   void _handleSearchPress() async {
-    // 構建 Google Maps 搜尋的網址，使用 encodeComponent 確保中文字元正確
+    // 構建地圖搜尋的網址，使用 encodeComponent 確保中文字元正確
     final String query = Uri.encodeComponent('${_currentText}');
-    final Uri url = Uri.parse('https://www.google.com/maps/search/$query');
+    final Uri url;
+    String buttonText;
+    
+    // 根據平台選擇地圖服務
+    if (Theme.of(context).platform == TargetPlatform.iOS) {
+      // iOS 使用 Apple Maps
+      url = Uri.parse('https://maps.apple.com/?q=$query');
+      buttonText = '開啟 Apple Maps';
+    } else {
+      // Android 使用 Google Maps
+      url = Uri.parse('https://www.google.com/maps/search/$query');
+      buttonText = '開啟 Google Maps';
+    }
 
     // 嘗試開啟網址，不檢查 canLaunchUrl（因為模擬器可能誤判）
     try {
@@ -518,7 +530,7 @@ class _ResultPageState extends State<ResultPage> {
       // 如果開啟失敗，顯示錯誤訊息
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('無法打開瀏覽器：$e'),
+          content: Text('無法打開地圖：$e'),
         ),
       );
     }
@@ -634,9 +646,11 @@ class _ResultPageState extends State<ResultPage> {
                                   ),
                                 ),
                                 icon: const Icon(Icons.search),
-                                label: const Text(
-                                  '開啟 Google Maps',
-                                  style: TextStyle(
+                                label: Text(
+                                  Theme.of(context).platform == TargetPlatform.iOS 
+                                    ? '開啟 Apple Maps' 
+                                    : '開啟 Google Maps',
+                                  style: const TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
                                   ),
